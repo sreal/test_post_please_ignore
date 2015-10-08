@@ -1,1 +1,2 @@
-typings/
+#ignore all dirs in typings
+typings/*

@@ -1,0 +1,22 @@
+/* global */
+body {
+  background-color: #FAFAFA;
+  color: #444;
+  cursor: default;
+  text-shadow: -2px 4px 4px #CCC;
+  text-transform: uppercase;
+}
+/* menu */
+menu {
+  padding:0;
+}
+menu li {
+  border: none 1px #333;
+  cursor:pointer;
+  list-style: none none;
+  padding: 1px;
+}
+menu li:hover {
+  border: solid 1px #333;
+  padding: 0px;
+}

@@ -12,19 +12,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 /// <reference path="typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
 // Annotation section
-var MyAppComponent = (function () {
-    function MyAppComponent() {
-        this.name = 'simon richard eames';
+var MyMenuComponent = (function () {
+    // name: string;
+    function MyMenuComponent() {
+        // this.name = 'Principessa';
     }
-    MyAppComponent = __decorate([
+    MyMenuComponent = __decorate([
         angular2_1.Component({
-            selector: 'my-app'
+            selector: 'my-menu'
         }),
         angular2_1.View({
-            template: '<h1>{{ name }}</h1>'
+            template: '<menu><li>résumé</li><li>projects</li></menu>'
         }), 
         __metadata('design:paramtypes', [])
-    ], MyAppComponent);
-    return MyAppComponent;
+    ], MyMenuComponent);
+    return MyMenuComponent;
 })();
-angular2_1.bootstrap(MyAppComponent);
+angular2_1.bootstrap(MyMenuComponent);

@@ -2,16 +2,16 @@
 import {Component, View, bootstrap} from 'angular2/angular2';
 // Annotation section
 @Component({
-  selector: 'my-app'
+  selector: 'my-menu'
 })
 @View({
-  template: '<h1>{{ name }}</h1>'
+  template: '<menu><li>résumé</li><li>projects</li></menu>'
 })
 // Component controller
-class MyAppComponent {
-  name: string;
+class MyMenuComponent {
+  // name: string;
   constructor() {
-    this.name = 'simon richard eames';
+    // this.name = 'Principessa';
   }
 }
-bootstrap(MyAppComponent);
+bootstrap(MyMenuComponent);

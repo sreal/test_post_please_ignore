@@ -14,6 +14,14 @@ var angular2_1 = require('angular2/angular2');
 // Annotation section
 var MyAppComponent = (function () {
     function MyAppComponent() {
+        this.message = function () {
+            if (document.body.className) {
+                document.body.className = "";
+            }
+            else {
+                document.body.className = "night";
+            }
+        };
         this.name = 'simon richard eames';
     }
     MyAppComponent = __decorate([
@@ -21,7 +29,7 @@ var MyAppComponent = (function () {
             selector: 'my-app'
         }),
         angular2_1.View({
-            template: '<h1>{{ name }}</h1>'
+            template: '<h1 (click)="message()">{{ name }}</h1>'
         }), 
         __metadata('design:paramtypes', [])
     ], MyAppComponent);

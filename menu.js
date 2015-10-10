@@ -13,16 +13,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var angular2_1 = require('angular2/angular2');
 // Annotation section
 var MyMenuComponent = (function () {
-    // name: string;
     function MyMenuComponent() {
-        // this.name = 'Principessa';
+        this.items = [
+            'projects',
+            'résumé'
+        ];
     }
     MyMenuComponent = __decorate([
         angular2_1.Component({
             selector: 'my-menu'
         }),
         angular2_1.View({
-            template: '<menu><li>résumé</li><li>projects</li></menu>'
+            directives: [angular2_1.NgFor],
+            template: '<menu><li *ng-for="#item of items"> {{ item }} </li></menu> '
         }), 
         __metadata('design:paramtypes', [])
     ], MyMenuComponent);

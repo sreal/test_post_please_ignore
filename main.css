@@ -7,6 +7,10 @@ body {
   text-transform: uppercase;
   font-family: Codystar, sans-serif;
 }
+body.night {
+  background-color: #444;
+  color: #CACACA;
+}
 /* menu */
 menu {
   padding:0;
@@ -18,7 +22,17 @@ menu li {
   padding: 1px;
 }
 menu li:hover {
-  border: solid 1px #333;
+  border: dotted 1px #333;
   padding: 0px;
   font-weight: bold;
+}
+
+.night menu li:hover {
+  color: #FFD700;
+  text-shadow: -2px 4px 10px #FFF1A8;
+}
+.night menu li:hover {
+  border: dotted 1px #FFD700;
+  color: #FFD700;
+  text-shadow: -2px 4px 10px #FFF1A8;
 }

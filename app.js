@@ -11,6 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 /// <reference path="typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
+var menu_1 = require('./menu');
+var projects_1 = require('./projects');
+var resume_1 = require('./resume');
 // Annotation section
 var MyAppComponent = (function () {
     function MyAppComponent() {
@@ -29,7 +32,13 @@ var MyAppComponent = (function () {
             selector: 'my-app'
         }),
         angular2_1.View({
-            template: '<h1 (click)="message()">{{ name }}</h1>'
+            template: ['<div>',
+                '<h1 (click)="message()"> {{ name }} </h1>',
+                '<my-menu></my-menu>',
+                '<projects></projects>',
+                '<resume></resume>',
+                '</div>'].join(''),
+            directives: [menu_1.MenuComponent, projects_1.ProjectsComponent, resume_1.ResumeComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], MyAppComponent);

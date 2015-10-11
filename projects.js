@@ -12,24 +12,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 /// <reference path="typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
 // Annotation section
-var MenuComponent = (function () {
-    function MenuComponent() {
-        this.items = [
-            'projects',
-            'résumé'
-        ];
+var ProjectsComponent = (function () {
+    function ProjectsComponent() {
     }
-    MenuComponent = __decorate([
-        angular2_1.Component({
-            selector: 'my-menu'
-        }),
+    ProjectsComponent = __decorate([
+        angular2_1.Component({ selector: 'projects' }),
         angular2_1.View({
-            directives: [angular2_1.NgFor],
-            template: '<menu><li *ng-for="#item of items"> {{ item }} </li></menu> '
+            template: '<div><h6> Wants some rye? Course ya do. </h6></div>'
         }), 
         __metadata('design:paramtypes', [])
-    ], MenuComponent);
-    return MenuComponent;
+    ], ProjectsComponent);
+    return ProjectsComponent;
 })();
-exports.MenuComponent = MenuComponent;
-angular2_1.bootstrap(MenuComponent);
+exports.ProjectsComponent = ProjectsComponent;
+angular2_1.bootstrap(ProjectsComponent);

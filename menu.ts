@@ -9,7 +9,7 @@ import {Component, View, bootstrap, NgFor} from 'angular2/angular2';
   template: '<menu><li *ng-for="#item of items"> {{ item }} </li></menu> '
 })
 // Component controller
-class MyMenuComponent {
+export class MenuComponent {
   items: Array<string>;
   constructor() {
     this.items = [
@@ -18,4 +18,4 @@ class MyMenuComponent {
     ];
   }
 }
-bootstrap(MyMenuComponent);
+bootstrap(MenuComponent);

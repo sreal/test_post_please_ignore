@@ -11,12 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 /// <reference path="typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
+var models_1 = require('./models');
 // Annotation section
 var MenuComponent = (function () {
     function MenuComponent() {
-        this.items = [
-            'projects',
-            'résumé'
+        this.menuItems = [
+            new models_1.MenuLink('résumé', 'https://sreal.github.io/resume'),
+            new models_1.MenuLink('projects', '#', false),
+            new models_1.MenuLink('contact', 'https://twitter.com/sreal', false)
         ];
     }
     MenuComponent = __decorate([
@@ -25,7 +27,11 @@ var MenuComponent = (function () {
         }),
         angular2_1.View({
             directives: [angular2_1.NgFor],
-            template: '<menu><li *ng-for="#item of items"> {{ item }} </li></menu> '
+            template: ['<menu>',
+                '<li *ng-for="#item of menuItems"> ',
+                '<a href="{{ item.href }}"> {{ item.label }} </a> ',
+                '</li>',
+                '</menu> '].join('')
         }), 
         __metadata('design:paramtypes', [])
     ], MenuComponent);

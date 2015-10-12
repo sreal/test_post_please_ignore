@@ -11,25 +11,36 @@ body.night {
   background-color: #444;
   color: #CACACA;
 }
+
+a {
+  /* override the system a underline & color */
+  color: inherit;  /* ensure night:hover works */
+  text-decoration: none;
+}
+
 /* menu */
 menu {
+  /* remove the left padding */
   padding:0;
 }
 menu li {
   border: none 1px #333;
   cursor:pointer;
   list-style: none none;
+  padding: 0;
   padding: 1px;
+}
+menu li a {
+  /* cover the li with a */
+  display: block;
+  height: 100%;
+  margin: 0;
+  width: 100%;
 }
 menu li:hover {
   border: dotted 1px #333;
-  padding: 0px;
   font-weight: bold;
-}
-
-.night menu li:hover {
-  color: #FFD700;
-  text-shadow: -2px 4px 10px #FFF1A8;
+  padding: 0px;
 }
 .night menu li:hover {
   border: dotted 1px #FFD700;

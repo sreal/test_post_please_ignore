@@ -31,6 +31,5 @@ class MyAppComponent {
       document.body.className = "night";
     }
   };
-
 }
 bootstrap(MyAppComponent);

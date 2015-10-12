@@ -3,6 +3,7 @@ import {Component, View, bootstrap} from 'angular2/angular2';
 import {MenuComponent} from './menu';
 import {ProjectsComponent} from './projects';
 import {ResumeComponent} from './resume';
+import {ConstructionComponent} from './construction';
 // Annotation section
 @Component({
   selector: 'my-app'
@@ -10,11 +11,12 @@ import {ResumeComponent} from './resume';
 @View({
   template: ['<div>',
                '<h1 (click)="message()"> {{ name }} </h1>',
+               '<construction></construction>',
                '<my-menu></my-menu>',
                '<projects></projects>',
                '<resume></resume>',
              '</div>'].join(''),
-  directives: [MenuComponent, ProjectsComponent, ResumeComponent]
+  directives: [MenuComponent, ProjectsComponent, ResumeComponent, ConstructionComponent]
 })
 // Component controller
 class MyAppComponent {

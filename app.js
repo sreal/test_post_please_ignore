@@ -14,6 +14,7 @@ var angular2_1 = require('angular2/angular2');
 var menu_1 = require('./menu');
 var projects_1 = require('./projects');
 var resume_1 = require('./resume');
+var construction_1 = require('./construction');
 // Annotation section
 var MyAppComponent = (function () {
     function MyAppComponent() {
@@ -34,11 +35,12 @@ var MyAppComponent = (function () {
         angular2_1.View({
             template: ['<div>',
                 '<h1 (click)="message()"> {{ name }} </h1>',
+                '<construction></construction>',
                 '<my-menu></my-menu>',
                 '<projects></projects>',
                 '<resume></resume>',
                 '</div>'].join(''),
-            directives: [menu_1.MenuComponent, projects_1.ProjectsComponent, resume_1.ResumeComponent]
+            directives: [menu_1.MenuComponent, projects_1.ProjectsComponent, resume_1.ResumeComponent, construction_1.ConstructionComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], MyAppComponent);

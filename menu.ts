@@ -1,4 +1,4 @@
-/// <reference path="typings/angular2/angular2.d.ts" />
+/// <reference path="typings/angular2/angular2-2.0.0-alpha.39.d.ts" />
 import {Component, View, bootstrap, NgFor} from 'angular2/angular2';
 import {MenuLink} from './models';
 

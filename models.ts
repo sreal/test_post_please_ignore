@@ -1,10 +1,10 @@
 export class MenuLink {
   label: string;
   href: string;
-  enabled: boolean;
-  constructor(label, href, enabled=true) {
+  isRouterLink: boolean;
+  constructor(label, href, isRouterLink=false) {
     this.label = label;
     this.href = href;
-    this.enabled = (typeof enabled === 'undefined') ? true: !!enabled;
+    this.isRouterLink = !!isRouterLink;
   }
 }

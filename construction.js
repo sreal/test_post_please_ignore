@@ -18,7 +18,7 @@ var ConstructionComponent = (function () {
     ConstructionComponent = __decorate([
         angular2_1.Component({ selector: 'construction' }),
         angular2_1.View({
-            template: '<div class="construction"><h5> <div>build in progress.</div> <div><small>so don\'t expect everything to work.</small></div> </h5></div>'
+            template: '<div class="construction"><h6> <div>build in progress.</div> <div><small>so don\'t expect everything to work.</small></div> </h6></div>'
         }), 
         __metadata('design:paramtypes', [])
     ], ConstructionComponent);

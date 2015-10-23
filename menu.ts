@@ -10,7 +10,7 @@ import {MenuLink} from './models';
   directives: [NgFor],
   template: ['<menu>',
                '<li *ng-for="#item of menuItems"> ',
-                 '<a href="{{ item.href }}"> {{ item.label }} </a> ',
+                 '<a target="_blank" href="{{ item.href }}"> {{ item.label }} </a> ',
                '</li>',
              '</menu> '].join('')
 })
@@ -21,7 +21,8 @@ export class MenuComponent {
     this.menuItems = [
       new MenuLink('résumé', 'https://sreal.github.io/resume'),
       new MenuLink('projects', '#', false),
-      new MenuLink('contact', 'https://twitter.com/sreal', false)
+      new MenuLink('pictures', 'https://www.flickr.com/photos/sreal'),
+      new MenuLink('contact', 'https://twitter.com/sreal')
     ];
   }
 }

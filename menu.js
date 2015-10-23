@@ -18,7 +18,8 @@ var MenuComponent = (function () {
         this.menuItems = [
             new models_1.MenuLink('résumé', 'https://sreal.github.io/resume'),
             new models_1.MenuLink('projects', '#', false),
-            new models_1.MenuLink('contact', 'https://twitter.com/sreal', false)
+            new models_1.MenuLink('pictures', 'https://www.flickr.com/photos/sreal'),
+            new models_1.MenuLink('contact', 'https://twitter.com/sreal')
         ];
     }
     MenuComponent = __decorate([
@@ -29,7 +30,7 @@ var MenuComponent = (function () {
             directives: [angular2_1.NgFor],
             template: ['<menu>',
                 '<li *ng-for="#item of menuItems"> ',
-                '<a href="{{ item.href }}"> {{ item.label }} </a> ',
+                '<a target="_blank" href="{{ item.href }}"> {{ item.label }} </a> ',
                 '</li>',
                 '</menu> '].join('')
         }), 

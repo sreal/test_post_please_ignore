@@ -8,3 +8,12 @@ export class MenuLink {
     this.isRouterLink = !!isRouterLink;
   }
 }
+
+export class ExperimentSummary {
+  title: string;
+  description: string;
+  constructor(title, description) {
+    this.title = title;
+    this.description = description;
+  }
+}

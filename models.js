@@ -8,3 +8,11 @@ var MenuLink = (function () {
     return MenuLink;
 })();
 exports.MenuLink = MenuLink;
+var ExperimentSummary = (function () {
+    function ExperimentSummary(title, description) {
+        this.title = title;
+        this.description = description;
+    }
+    return ExperimentSummary;
+})();
+exports.ExperimentSummary = ExperimentSummary;

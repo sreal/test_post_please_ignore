@@ -16,12 +16,17 @@ var models_1 = require('./models');
 // Annotation section
 var MenuComponent = (function () {
     function MenuComponent() {
+        var linkAs = {
+            external: false,
+            router: true
+        };
         this.menuItems = [
-            new models_1.MenuLink('résumé', 'https://sreal.github.io/resume'),
-            new models_1.MenuLink('résumé2', './Resume', true),
-            new models_1.MenuLink('projects', './Projects', true),
-            new models_1.MenuLink('pictures', 'https://www.flickr.com/photos/sreal'),
-            new models_1.MenuLink('contact', 'https://twitter.com/sreal')
+            new models_1.MenuLink('résumé', 'https://sreal.github.io/resume', linkAs.external),
+            new models_1.MenuLink('pictures', 'https://www.flickr.com/photos/sreal', linkAs.external),
+            new models_1.MenuLink('contact', 'https://twitter.com/sreal', linkAs.external),
+            new models_1.MenuLink('experiment a', './Conjugator', linkAs.router),
+            new models_1.MenuLink('experiment b', './ScreenSaver', linkAs.router),
+            new models_1.MenuLink('experiment -', './Testbed', linkAs.router),
         ];
     }
     MenuComponent = __decorate([
@@ -29,10 +34,10 @@ var MenuComponent = (function () {
             selector: 'my-menu'
         }),
         angular2_1.View({
-            directives: [angular2_1.NgFor, angular2_1.NgIf, router_1.RouterLink],
+            directives: [angular2_1.NgFor, angular2_1.NgIf, angular2_1.NgClass, router_1.RouterLink],
             template: ['<menu>',
                 '<li *ng-for="#item of menuItems"> ',
-                '<a *ng-if="!!item.isRouterLink" [router-link]="[ item.href ]"> {{ item.label }}* </a> ',
+                '<a *ng-if="!!item.isRouterLink" [router-link]="[ item.href ]"> {{ item.label }} </a> ',
                 '<a *ng-if=" !item.isRouterLink" target="_blank" href="{{ item.href }}"> {{ item.label }} </a> ',
                 '</li>',
                 '</menu> '].join('')

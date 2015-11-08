@@ -17,6 +17,9 @@ var menu_1 = require('./menu');
 var construction_1 = require('./construction');
 var resume_1 = require('./resume');
 var projects_1 = require('./projects');
+var conjugator_1 = require('./conjugator');
+var screensaver_1 = require('./screensaver');
+var testbed_1 = require('./testbed');
 // Annotation section
 var MyAppComponent = (function () {
     function MyAppComponent() {
@@ -38,15 +41,18 @@ var MyAppComponent = (function () {
             template: ['<div>',
                 '<h1 (click)="message()"> {{ name }} </h1>',
                 '<my-menu></my-menu>',
-                '<construction></construction>',
                 '<router-outlet></router-outlet>',
                 '</div>'].join(''),
             directives: [router_1.ROUTER_DIRECTIVES, menu_1.MenuComponent, construction_1.ConstructionComponent]
         }),
         router_1.RouteConfig([
-            // { path: '/', redirectTo:'Projects' },
+            { path: '/', redirectTo: '/construction' },
+            { path: '/construction', as: 'Construction', component: construction_1.ConstructionComponent },
             { path: '/resume', as: 'Resume', component: resume_1.ResumeComponent },
-            { path: '/projects', as: 'Projects', component: projects_1.ProjectsComponent }
+            { path: '/projects', as: 'Projects', component: projects_1.ProjectsComponent },
+            { path: '/exp-a', as: 'Conjugator', component: conjugator_1.ConjugatorComponent },
+            { path: '/exp-b', as: 'ScreenSaver', component: screensaver_1.ScreenSaverComponent },
+            { path: '/exp--', as: 'Testbed', component: testbed_1.TestbedComponent }
         ]), 
         __metadata('design:paramtypes', [])
     ], MyAppComponent);

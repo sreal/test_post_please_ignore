@@ -24,9 +24,6 @@ var MenuComponent = (function () {
             new models_1.MenuLink('résumé', 'https://sreal.github.io/resume', linkAs.external),
             new models_1.MenuLink('pictures', 'https://www.flickr.com/photos/sreal', linkAs.external),
             new models_1.MenuLink('contact', 'https://twitter.com/sreal', linkAs.external),
-            new models_1.MenuLink('experiment a', './Conjugator', linkAs.router),
-            new models_1.MenuLink('experiment b', './ScreenSaver', linkAs.router),
-            new models_1.MenuLink('experiment -', './Testbed', linkAs.router),
         ];
     }
     MenuComponent = __decorate([

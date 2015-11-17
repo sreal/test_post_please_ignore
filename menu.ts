@@ -29,9 +29,9 @@ export class MenuComponent {
       new MenuLink('résumé', 'https://sreal.github.io/resume', linkAs.external),
       new MenuLink('pictures', 'https://www.flickr.com/photos/sreal', linkAs.external),
       new MenuLink('contact', 'https://twitter.com/sreal', linkAs.external),
-      new MenuLink('experiment a', './Conjugator', linkAs.router),
-      new MenuLink('experiment b', './ScreenSaver', linkAs.router),
-      new MenuLink('experiment -', './Testbed', linkAs.router),
+      // new MenuLink('experiment a', './Conjugator', linkAs.router),
+      // new MenuLink('experiment b', './ScreenSaver', linkAs.router),
+      // new MenuLink('experiment -', './Testbed', linkAs.router),
     ];
   }
 }
